@@ -1,0 +1,6 @@
+@AuthApp_tdsa_HostAddress = http://localhost:5264
+
+GET {{AuthApp_tdsa_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
