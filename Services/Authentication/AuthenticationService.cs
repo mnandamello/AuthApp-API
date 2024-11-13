@@ -38,7 +38,7 @@ namespace AuthApp_tdsa.Services.Authentication
             {
                 Email = request.Email,
                 Password = request.Password,
-                DisplayName = request.DisplayName
+                DisplayName = request.NomeEmpresa
             };
             var usuario = await FirebaseAuth.DefaultInstance.CreateUserAsync(userArgs);
 
@@ -46,7 +46,7 @@ namespace AuthApp_tdsa.Services.Authentication
             var userOr = new User
             {
                 Uid = usuario.Uid,
-                UserName = usuario.DisplayName,
+                NomeEmpresa = usuario.DisplayName,
                 Email = usuario.Email,
                 Password = ""
             };

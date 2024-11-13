@@ -6,12 +6,13 @@ namespace AuthApp.Models
     {
         public string Uid { get; set; }
         [Required]
-        public string UserName { get; set; }
+        public string NomeEmpresa { get; set; }
+
         [Required]
         [EmailAddress]
         [Key]
         public string Email { get; set; }
-        [Required]
-        public string Password { get; set; }
+
+        public string? Password { get; set; }
     }
 }
